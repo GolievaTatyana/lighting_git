@@ -1,0 +1,415 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+body {
+	width: 757px;
+    height: 918px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: "Tahoma";
+}
+header {
+	width: 755px;
+    height: 80px;
+}
+header img:nth-child(1) {
+	position: relative;
+	left: 12px;
+	top: 9px;
+	width: 400px;
+	height: 63px;
+}
+header img:nth-child(2) {
+	float: right;
+	margin-top: 35px;
+	margin-right: 20px;
+}
+/*горизонтальное меню*/
+.horizontal {
+	box-sizing: border-box;
+	float: left;
+	background-color: rgb(162, 81, 0);
+	position: relative;
+	left: 1px;
+	top: 0;
+	width: 750px;
+	height: 30px;
+}
+.horizontal ul {
+	float: right;
+	margin-right: 2px;
+	margin-top: 2px;
+	width: 744px;
+	height: 24px;
+	border: 1px solid #cba674
+}
+.horizontal ul li {
+	float: left;
+	line-height: 1.5; 
+	border-left: 1px solid #cba674;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.horizontal ul li:nth-child(1) {
+	padding-right: 55px;
+	padding-left: 0;
+	line-height: 1.3;
+	border-left: none;
+}
+/*общее оформление форм*/
+.form {
+	margin-left: 10px;
+} 
+.form input[type=text] {
+	text-align: left;
+	padding-left: 3px;
+	width: 150px;
+    height: 13px;
+    background-color: rgb(255, 255, 255);
+	box-shadow: inset 1.5px 2.598px 3px 0px rgba(45, 17, 6, 0.18);
+}
+.form input[type=submit] {
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	border: none;
+	background-color: rgb(162, 81, 0);
+	padding: 0;
+}
+.form input[type=mail] {
+	text-align: left;
+	padding-left: 3px;
+	width: 150px;
+    height: 13px;
+    background-color: rgb(255, 255, 255);
+	box-shadow: inset 1.5px 2.598px 3px 0px rgba(45, 17, 6, 0.18);
+}
+/*кнопка в верхней форме*/
+#circle {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(0, 0, 0);
+	border-radius: 50%;
+	background-color: rgb(245, 240, 234);
+	box-shadow: 1px 1.732px 2px 0px rgba(0, 0, 0, 0.5);
+	width: 19px;
+	height: 19px;
+	line-height: 1.5;
+	color: rgb(124, 65, 6);
+	font-size: 12px;
+	box-sizing: border-box;
+	text-transform: lowercase;
+	padding-left: 2px;
+}
+.horizontal li a {
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	line-height: 2.1;
+	text-align: right;
+	text-decoration: none;
+	height: 24px;
+}
+.horizontal img {
+	vertical-align: 0.5%;
+	margin-left: 27px;
+}
+/*вертикальное меню*/
+.vertical {
+	float: left;
+	padding:0;
+	margin-right: 0px;
+	background-color: rgb(245, 240, 234);
+	width: 192px;
+	height: 659px;
+}
+.vertical p {
+	padding-top: 10px;
+	padding-left: 12px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 2;
+}
+.vertical ul {
+	border-bottom: 1px solid #e9d8c7;
+	padding-bottom: 10px;
+}
+/*убираем border после ссылок на магазины*/
+.vertical ul:last-child {
+	border-bottom: none;
+}
+.vertical ul > li a {
+	display: block;
+    font-size: 12px;
+	color: #603000;
+	font-weight: bold;
+	line-height: 1.583;
+	text-align: left;
+	text-decoration: none;
+	font-weight: normal;
+	padding-left: 22px;
+}
+.vertical ul > li:hover {
+	 background-color: rgba(255, 255, 255, 0.8);
+	 width: 192px;
+}
+.vertical a:hover {
+	font-weight: bold;
+}
+/*выпадающее меню*/
+.vertical .sub-menu {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+	position: absolute;
+	top: 162px;
+	left: 487px;
+	width: 145px;
+	height: 145px;
+	z-index: 128;
+	display: none;
+}
+.vertical .sub-menu a {
+	padding-left: 14px;
+	color: black;
+}
+.vertical .sub-menu a:hover {
+	font-weight: normal;
+	color: #603000;
+}
+.vertical li:hover .sub-menu {
+	display: block;
+}
+.vertical .sub-menu li:hover {
+	width: 145px;
+}
+/*блок с сылками на магазины*/
+.corner button {
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	background-color: rgb(175, 159, 71);
+	width: 170px;
+	height: 33px;
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	text-align: left;
+	text-decoration: none;
+	line-height: 2;
+	padding-left: 10px;
+}
+.corner button span {
+	padding-left: 30px;
+}
+.corner p {
+	font-size: 12px;
+	color: rgb(1, 1, 0);
+	line-height: 1.5;
+	text-align: left;
+	font-weight: normal;
+}
+.disigners_corner li a {
+	padding-top: 10px;
+
+}
+.disigners_corner li a:hover {
+	background-color: #f5f0ea;
+}
+.clear {
+	clear: both;
+}
+/*главный блок*/
+.main {
+	margin-left: 0px;
+	float: right;
+	height: 659px;
+	width: 565px;
+}
+.main .banner {
+	background: url("../img/baner.png") center center;
+	background-size: cover
+	width: 558px;
+    height: 337px;
+    z-index: 30;
+    margin-bottom: 3px;
+    margin-left: 1px;
+}
+.main .banner p {
+	font-size: 30px;
+	text-transform: uppercase;
+	font-family: "Tahoma";
+	color: rgba(0, 0, 0, 0.349);
+	font-weight: bold;
+	line-height: 11;
+	text-align: center;
+}
+/*карточки товаров*/
+.main .cards {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	width: 565px;
+	height: 185px;
+}
+/*общее оформление карточек*/
+.light {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	border-radius: 3px;
+	background-color: rgb(245, 240, 234);
+	width: 136px;
+	height: 180px;
+}
+.light p {
+	text-align: center;
+	font-size: 11px;
+	font-family: "Tahoma";
+	color: rgb(255, 255, 255);
+	line-height: 2.1;
+	border-radius: 3px 3px 0px 0px;
+  	height: 25px;
+  	width: 133px;
+}
+.light div {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	width: 130px;
+	height: 132px;
+	background-color: white;
+}
+.light a {
+	display: block;
+	text-align: right;
+	font-size: 11px;
+	font-family: "Tahoma";
+	line-height: 1.6;
+	text-decoration: none;
+	height: 20px;
+	width: 136px;
+	padding-right: 10px;
+}
+/*изменяем цвет вкладок и ссылок*/
+.color1 {
+	background-color: rgb(164, 171, 101);
+}
+.color2 {
+	background-color: rgb(115, 93, 51);
+}
+.color3 {
+	 background-color: rgb(173, 102, 54);
+}
+.color4 {
+	 background-color: rgb(175, 159, 71);
+}
+.color1a {
+	color: rgb(164, 171, 101);
+}
+.color2a {
+	color: rgb(115, 93, 51);
+}
+.color3a {
+	color: rgb(173, 102, 54);
+}
+.color4a {
+	color: rgb(175, 159, 71);
+}
+/*оформление форм*/
+.search {
+	padding-top: 28px;
+	display: flex;
+	flex-flow: row wrap;
+	width: 565px;
+	height: 140px;
+	justify-content: space-around;
+}
+.search div {
+	border-radius: 3px;
+	background-color: rgb(245, 240, 234);
+	width: 266px;
+	height: 105px;
+}
+.search h1 {
+	width: 256px;
+	height: 25px;
+	border-radius: 3px 3px 0px 0px;
+	background-color: rgb(162, 81, 0);
+	font-size: 11px;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	font-weight: lighter;
+	line-height: 2.273;
+	text-align: left;
+	padding-left: 10px;
+}
+.search p {
+	font-size: 11px;
+	color: rgb(1, 0, 0);
+	line-height: 1.2;
+	text-align: left;
+	padding: 10px;
+}
+/*круглая кнопка нижних форм*/
+.buttom  {
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 50%;
+	background-color: rgb(162, 81, 0);
+	box-shadow: 1px 1.732px 2px 0px rgba(0, 0, 0, 0.5);
+	width: 15px;
+	height: 15px;
+	font-size: 9px;
+	text-transform: lowercase;
+	box-sizing: border-box;
+	line-height: 1.5;
+}
+/*ссылки на страницы*/
+.pagination  {
+	height: 40px;
+	width: 754px;
+}
+.pagination ul {
+	display: inline;
+	position: relative;
+	left: 180px;
+	width: 374px;
+  	height: 11px;
+}
+.pagination li {
+	display: inline;
+	font-size: 13px;
+	color: rgba(162, 81, 0, 0.749);
+	font-weight: bold;
+}
+.pagination li a {
+	color: rgba(162, 81, 0, 0.749);
+	font-weight: bold;
+	line-height: 3;
+	text-decoration: none;
+}
+.string {
+	width: 755px;
+  	height: 3px;
+  	background-color: rgb(162, 81, 0);
+}
+footer {
+	width: 755px;
+    height: 108px;
+}
+footer p {
+	float: right;
+	font-size: 11px;
+	color: rgb(153, 153, 153);
+	line-height: 1.727;
+	text-align: right;
+	width: 300px;
+	height: 30px;
+	padding: 20px 5px;
+}
+footer img {
+	padding: 15px 5px;
+}
